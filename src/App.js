@@ -1,11 +1,6 @@
 import './App.css';
+import Hangman from "./Hangman.js";
 
-function App() {
-  return (
-    <div className="App">
-    <h1>Hello world!</h1>
-    </div>
-  );
-}
+const App = () => <Hangman/>
 
 export default App;
