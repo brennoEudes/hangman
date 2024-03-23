@@ -284,6 +284,23 @@ export default function Hangman() {
     }
   };
 
+  useEffect(() => {
+    // verifica se todas as letras estão corretas
+    if (
+      corrects.length &&
+      word.split("").every((letter) => corrects.includes(letter))
+    ) {
+      console.log("You are winner!");
+    }
+  }, [corrects]);
+
+  useEffect(() => {
+    // verifica nº tentativas
+    if (fails.length === 10) {
+        console.log("You are looser!")
+    }
+  }, [fails]);
+
   useEffect(reset, []);
 
   // escondendo a palavra p/usuário:
