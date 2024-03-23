@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
+
 export default function Hangman() {
+  // lista letras alfabeto:
   const alphabets = [
     "A",
     "B",
@@ -28,6 +31,7 @@ export default function Hangman() {
     "Z",
   ];
 
+  // lista animais:
   const animals = [
     "aardvark",
     "albatross",
@@ -257,4 +261,18 @@ export default function Hangman() {
     "yak",
     "zebra",
   ];
+
+  const [word, setWord] = useState("");
+
+  // pegando uma palavra randomicamente em "animals":
+  const randomizeWord = () => setWord(animals[Math.floor(Math.random() * animals.length)].toUpperCase());
+
+  // resetando a aplicação:
+  const reset = () => {
+    randomizeWord();
+  };
+
+  useEffect(reset, []);
+
+  return word;
 }
