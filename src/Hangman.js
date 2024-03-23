@@ -263,6 +263,8 @@ export default function Hangman() {
   ];
 
   const [word, setWord] = useState("");
+  const [corrects, setCorrects] = useState([]);
+  const [fails, setFails] = useState([]);
 
   // pegando uma palavra randomicamente em "animals":
   const randomizeWord = () =>
@@ -271,6 +273,15 @@ export default function Hangman() {
   // resetando a aplicação:
   const reset = () => {
     randomizeWord();
+  };
+
+  // checando se a letra existe na palavra:
+  const onGuess = (letter) => {
+    if (word.includes(letter)) {
+      setCorrects([...corrects,letter]);
+    } else {
+      setFails([...fails,letter]);
+    }
   };
 
   useEffect(reset, []);
@@ -287,7 +298,9 @@ export default function Hangman() {
         <p className="mask">{maskWord}</p>
         <div>
           {alphabets.map((letter, index) => (
-            <button key={index}>{letter}</button>
+            <button onClick={() => onGuess(letter)} key={index}>
+              {letter}
+            </button>
           ))}
         </div>
       </div>
