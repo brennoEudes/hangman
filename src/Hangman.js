@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Progress from "./Progress";
 
 export default function Hangman() {
   // lista letras alfabeto:
@@ -323,6 +324,7 @@ export default function Hangman() {
               {letter}
             </button>
           ))}
+          <Progress fails={fails.length}/>
         </div>
       </div>
     </>
