@@ -278,9 +278,9 @@ export default function Hangman() {
   // checando se a letra existe na palavra:
   const onGuess = (letter) => {
     if (word.includes(letter)) {
-      setCorrects([...corrects,letter]);
+      setCorrects([...corrects, letter]);
     } else {
-      setFails([...fails,letter]);
+      setFails([...fails, letter]);
     }
   };
 
@@ -298,7 +298,11 @@ export default function Hangman() {
         <p className="mask">{maskWord}</p>
         <div>
           {alphabets.map((letter, index) => (
-            <button onClick={() => onGuess(letter)} key={index}>
+            <button
+              disabled={corrects.includes(letter) || fails.includes(letter)} // bloqueia letra após seleção
+              onClick={() => onGuess(letter)}
+              key={index}
+            >
               {letter}
             </button>
           ))}
