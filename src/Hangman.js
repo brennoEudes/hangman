@@ -306,7 +306,7 @@ export default function Hangman() {
   // escondendo a palavra p/usuário:
   const maskWord = word
     .split("")
-    .map((letter) => "_")
+    .map((letter) => corrects.includes(letter) ? letter : "_") // se certa, apresenta a letra! Se ñ, nada.
     .join("");
 
   return (
