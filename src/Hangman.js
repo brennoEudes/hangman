@@ -281,5 +281,16 @@ export default function Hangman() {
     .map((letter) => "_")
     .join("");
 
-  return maskWord;
+  return (
+    <>
+      <div>
+        <p className="mask">{maskWord}</p>
+        <div>
+          {alphabets.map((letter, index) => (
+            <button key={index}>{letter}</button>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
