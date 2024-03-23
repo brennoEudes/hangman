@@ -265,7 +265,8 @@ export default function Hangman() {
   const [word, setWord] = useState("");
 
   // pegando uma palavra randomicamente em "animals":
-  const randomizeWord = () => setWord(animals[Math.floor(Math.random() * animals.length)].toUpperCase());
+  const randomizeWord = () =>
+    setWord(animals[Math.floor(Math.random() * animals.length)].toUpperCase());
 
   // resetando a aplicação:
   const reset = () => {
@@ -274,5 +275,11 @@ export default function Hangman() {
 
   useEffect(reset, []);
 
-  return word;
+  // escondendo a palavra p/usuário:
+  const maskWord = word
+    .split("")
+    .map((letter) => "_")
+    .join("");
+
+  return maskWord;
 }
