@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Progress from "./Progress";
+import Progress from "./Progress.js";
+import Popup from "./Popup.js";
 
 export default function Hangman() {
   // lista letras alfabeto:
@@ -266,6 +267,7 @@ export default function Hangman() {
   const [word, setWord] = useState("");
   const [corrects, setCorrects] = useState([]);
   const [fails, setFails] = useState([]);
+  const [status, setStatus] = useState("");
 
   // pegando uma palavra randomicamente em "animals":
   const randomizeWord = () =>
@@ -274,6 +276,9 @@ export default function Hangman() {
   // resetando a aplicação:
   const reset = () => {
     randomizeWord();
+    setCorrects([]);
+    setFails([]);
+    setStatus("");
   };
 
   // checando se a letra existe na palavra:
@@ -291,14 +296,14 @@ export default function Hangman() {
       corrects.length &&
       word.split("").every((letter) => corrects.includes(letter))
     ) {
-      console.log("You are winner!");
+      setStatus("winner");
     }
   }, [corrects]);
 
   useEffect(() => {
     // verifica nº tentativas
     if (fails.length === 10) {
-        console.log("You are looser!")
+      setStatus("looser");
     }
   }, [fails]);
 
@@ -307,7 +312,7 @@ export default function Hangman() {
   // escondendo a palavra p/usuário:
   const maskWord = word
     .split("")
-    .map((letter) => corrects.includes(letter) ? letter : "_") // se certa, apresenta a letra! Se ñ, nada.
+    .map((letter) => (corrects.includes(letter) ? letter : "_")) // se certa, apresenta a letra! Se ñ, nada.
     .join("");
 
   return (
@@ -324,7 +329,8 @@ export default function Hangman() {
               {letter}
             </button>
           ))}
-          <Progress fails={fails.length}/>
+          <Progress fails={fails.length} />
+          <Popup status={status} word={word} reset={reset} />
         </div>
       </div>
     </>
