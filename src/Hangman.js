@@ -317,9 +317,9 @@ export default function Hangman() {
 
   return (
     <>
-      <div>
+      <div className="hangman">
         <p className="mask">{maskWord}</p>
-        <div>
+        <div className="alphabet-letters">
           {alphabets.map((letter, index) => (
             <button
               disabled={corrects.includes(letter) || fails.includes(letter)} // bloqueia letra após seleção
