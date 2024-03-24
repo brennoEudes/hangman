@@ -38,6 +38,16 @@ body {
   gap: 2rem;
 }
 
+/* GALLOWS */
+.gallows {
+  background: white;
+  width: 24rem;
+  height: 60rem;
+  margin: 0 auto;
+
+  border-radius: 1.6rem;
+}
+
 /* HANGMAN */
 .hangman svg {
   position: absolute;
@@ -50,7 +60,7 @@ body {
 
 .hangman line,
 .hangman circle {
-  stroke: white;
+  stroke: black;
   stroke-width: 4;
   fill: none;
 }
