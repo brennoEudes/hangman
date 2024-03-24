@@ -19,7 +19,7 @@ const Progress = ({ fails }) => {
   };
 
   return (
-    <div className="hangman">
+    <div className="hangman-parts">
       <svg xmlns="http://www.w3.org/2000/svg">{renderHangmanParts()}</svg>
     </div>
   );
