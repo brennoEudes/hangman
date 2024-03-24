@@ -1,12 +1,14 @@
 const Popup = ({ status, word, reset }) => {
   if (!status) {
-    return;
+    return null;
   } else {
-    <div className="popup">
-      <p>You are {status}!</p>
-      <p>The word was: {word}.</p>
-      <button onClick={reset}>Play Again</button>
-    </div>;
+    return (
+      <div className="popup">
+        <p>You are {status}!</p>
+        <p>The word was: {word}.</p>
+        <button onClick={reset}>Play Again</button>
+      </div>
+    );
   }
 };
 

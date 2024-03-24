@@ -298,7 +298,7 @@ export default function Hangman() {
     ) {
       setStatus("winner");
     }
-  }, [corrects]);
+  }, [corrects, word]);
 
   useEffect(() => {
     // verifica nº tentativas
@@ -330,7 +330,9 @@ export default function Hangman() {
             </button>
           ))}
           <Progress fails={fails.length} />
-          <Popup status={status} word={word} reset={reset} />
+          {(status === "winner" || status === "looser") && (
+            <Popup status={status} word={word} reset={reset} />
+          )}{" "}
         </div>
       </div>
     </>
