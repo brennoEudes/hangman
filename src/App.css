@@ -12,9 +12,9 @@
   font-family: "Bubblegum Sans", sans-serif;
 }
 
-body,
-html {
+body {
   background: green;
+  font-size: 1.6rem;
 }
 
 .hangman svg {
