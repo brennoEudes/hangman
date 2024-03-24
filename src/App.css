@@ -10,11 +10,17 @@
 :root {
   font-size: 62.5%;
   font-family: "Bubblegum Sans", sans-serif;
+  color: white;
 }
 
 body {
-  background: green;
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
   font-size: 1.6rem;
+
+  /* Um jeito de centralizar a caixa ao centro: */
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 .hangman svg {
