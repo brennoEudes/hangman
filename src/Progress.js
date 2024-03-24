@@ -1,3 +1,5 @@
+import React from "react";
+
 const Progress = ({ fails }) => {
   const hangmanParts = [
     <line key={1} className="" x1="1%" y1="95%" x2="99%" y2="95%"></line>,
@@ -12,10 +14,13 @@ const Progress = ({ fails }) => {
     <line key={10} className="draw" x1="70%" y1="38%" x2="72%" y2="46%"></line>,
   ];
 
+  const renderHangmanParts = () => {
+    return hangmanParts.slice(0, fails);
+  };
+
   return (
     <div className="hangman">
-      <svg xmlns="http://www.w3.org/2000/svg"></svg>
-      {hangmanParts.slice(0, fails)}
+      <svg xmlns="http://www.w3.org/2000/svg">{renderHangmanParts()}</svg>
     </div>
   );
 };
