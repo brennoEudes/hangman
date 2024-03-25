@@ -178,3 +178,30 @@ body {
   100% {
   }
 }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .hangman {
+    .mask {
+      font-size: 8rem;
+    }
+  }
+
+  .popup-wrapper {
+    .popup {
+      padding: 4rem 12rem;
+
+      width: 60vw;
+      height: 30vh;
+
+      .status-popup {
+        font-size: 3.2rem;
+      }
+
+      a {
+        text-decoration: underline;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
