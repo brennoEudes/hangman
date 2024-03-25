@@ -195,13 +195,15 @@ body {
 
   .popup-wrapper {
     .popup {
-      padding: 4rem 12rem;
-
-      width: 60vw;
-      height: 30vh;
+      width: 40vw;
+      height: 40vh;
 
       .status-popup {
         font-size: 3.2rem;
+      }
+
+      button {
+        max-width: 60%;
       }
 
       a {
