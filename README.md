@@ -16,7 +16,3 @@ The technologies used were:
 - Javascript;
 - ReactJS
 - Figma;
-
-## Layout
-You can see the project's layout at [link](https://www.figma.com/file/jiR3msf7va4gCvGn45p8zm/Biscoito-da-Sorte-(Community)?type=design&node-id=203-48&mode=design&t=jv7juRrrdPH9ufBV-0). 
-A [Figma](https://www.figma.com) account is required.
