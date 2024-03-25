@@ -11,6 +11,7 @@ const Popup = ({ status, word, reset }) => {
           <button id="reset-button" onClick={reset}>
             Play Again
           </button>
+          {/* <a href="https://wa.me/?text=I%20liked%20Hangman%20Nature%20game%20and%20I%20invite%20you!%20Try%20it%20now!" alt="What App link invite"></a> */}
         </div>
       </div>
     );
