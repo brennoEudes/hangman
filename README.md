@@ -14,5 +14,4 @@ The technologies used were:
 - HTML;
 - CSS;
 - Javascript;
-- ReactJS
-- Figma;
+- ReactJS.
