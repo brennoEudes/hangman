@@ -59,7 +59,7 @@ body {
   border-radius: 1rem;
 
   position: absolute;
-  top: 45%;
+  top: 43%;
   left: 50%;
   width: 64vw;
   height: 20vh;
@@ -78,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 
   animation: appear-2 4s; /* As imgs já comecam do ponto menor e depois aumentam*/
 
