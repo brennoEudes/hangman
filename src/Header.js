@@ -2,12 +2,8 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <h1>title</h1>
-        <p>
-          Challenge your instincts in this exciting word puzzle!
-          <br/>
-          <p>Can you guess the animal name?</p>
-        </p>
+        <h1>Hangman Nature🌿</h1>
+        <p>Challenge your instincts guessing the animal name!</p>
       </div>
     </>
   );
