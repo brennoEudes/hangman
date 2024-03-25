@@ -187,6 +187,12 @@ body {
     }
   }
 
+  .hangman svg {
+    top: 45%;
+    width: 46vw;
+    height: 40vh;
+  }
+
   .popup-wrapper {
     .popup {
       padding: 4rem 12rem;
