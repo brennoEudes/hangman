@@ -12,7 +12,7 @@ const Popup = ({ status, word, reset }) => {
             Play Again
           </button>
           <a
-            href="https://wa.me/?text=Hi!%20I%20liked%20HangmAnimals%20game%20and%20I%20would%20like%20invite%20you!%20Try%20it%20now!%20https://main--hangmanimals.netlify.app/"
+            href="https://wa.me/?text=Hi!%20I%20liked%20HangmAnimals%20game%20and%20I%20would%20like%20to%20invite%20you!%20Try%20it%20now!%20https://main--hangmanimals.netlify.app/"
             alt="What App link invite"
           >
             Invite your friends
