@@ -7,7 +7,7 @@ Welcome to HangmAnimals, a classic word-guessing game brought to life with moder
 
 The objective is simple: guess the hidden animal name by selecting letters below. Each correct guess reveals a part of the word, but be careful - too many wrong guesses and it's game over! With a wide range of words to challenge your vocabulary, HangmAnimals is both entertaining and educational.
 
-Are you ready to challenge your instints?
+Are you ready to challenge your instints? Try it now! https://main--hangmanimals.netlify.app/
 
 ## Technologies
 The technologies used were:
