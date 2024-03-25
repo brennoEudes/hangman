@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 2rem;
 
   height: 100%;
 }
@@ -56,11 +56,10 @@ body {
 /* HANGMAN PARTS */
 .hangman svg {
   background: white;
-  padding: 2rem;
   border-radius: 1rem;
 
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 64vw;
   height: 20vh;
