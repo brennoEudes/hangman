@@ -1,6 +1,6 @@
 import "./App.css";
-import Hangman from "./Hangman.js";
-import Header from "./Header.js";
+import Hangman from "./components/Hangman.js";
+import Header from "./components/Header";
 
 const App = () => {
   return (
