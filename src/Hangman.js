@@ -296,14 +296,14 @@ export default function Hangman() {
       corrects.length &&
       word.split("").every((letter) => corrects.includes(letter))
     ) {
-      setStatus("winner");
+      setStatus("Well Done");
     }
   }, [corrects, word]);
 
   useEffect(() => {
     // verifica nº tentativas
     if (fails.length === 10) {
-      setStatus("looser");
+      setStatus("Game Over");
     }
   }, [fails]);
 
@@ -330,7 +330,7 @@ export default function Hangman() {
             </button>
           ))}
           <Progress fails={fails.length} />
-          {(status === "winner" || status === "looser") && (
+          {(status === "Well Done" || status === "Game Over") && (
             <Popup status={status} word={word} reset={reset} />
           )}{" "}
         </div>
