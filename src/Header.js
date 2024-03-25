@@ -3,7 +3,11 @@ export default function Header() {
     <>
       <div className="header">
         <h1>title</h1>
-        <p>subtitle</p>
+        <p>
+          Challenge your instincts in this exciting word puzzle!
+          <br/>
+          <p>Can you guess the animal name?</p>
+        </p>
       </div>
     </>
   );
