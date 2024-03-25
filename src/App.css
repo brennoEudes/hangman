@@ -57,6 +57,7 @@ body {
 .hangman svg {
   background: white;
   border-radius: 1rem;
+  padding: 2rem;
 
   position: absolute;
   top: 43%;
