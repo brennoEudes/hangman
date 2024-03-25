@@ -38,15 +38,16 @@ body {
   gap: 2rem;
 }
 
+/* HANGMAN PARTS */
 .hangman svg {
   background: white;
   padding: 2rem;
   border-radius: 1rem;
 
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  width: 40vw;
+  width: 64vw;
   height: 40vh;
   transform: translate(-50%, -50%);
 }
